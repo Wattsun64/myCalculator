@@ -1,3 +1,5 @@
+// Main Variables
+
 var numOne,
     numTwo,
     display = document.getElementById('display'),
@@ -23,6 +25,8 @@ function numOutput() {
     }
 }
 
+// Addition Function
+
 addition();
 
 function addition() {
@@ -40,6 +44,8 @@ function addition() {
 
     }
 }
+
+// Subtraction Function
 
 subtraction();
 
@@ -59,6 +65,8 @@ function subtraction() {
     }
 }
 
+// Multiplication Function
+
 multiplication();
 
 function multiplication() {
@@ -76,6 +84,8 @@ function multiplication() {
 
     }
 }
+
+// Division Function
 
 division();
 
