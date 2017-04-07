@@ -1,0 +1,102 @@
+/* Main Styles */
+
+p {
+    font-family: courier;
+    font-size: 1.2rem;
+}
+
+#calculator {
+    background-color: #e2e2e2;
+    width: 30%;
+    padding: 20px;
+
+}
+
+.number, #equal, #clear, .operator {
+    width: 32.5%;
+    border: none;
+    padding: 30px;
+    margin: 2px 0 2px 0;
+    font-family: courier;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.operator {
+    width: 24.2%;
+}
+
+#equal, #clear {
+    width: 99%;
+}
+
+.number:hover, .operator:hover, #equal:hover, #clear:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+#out {
+    width: 95.5%;
+    height: 100px;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: courier;
+    margin-bottom: 10px;
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 414px) {
+    #calculator {
+        width: 100%;
+        height: 110%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+    .number, .operator {
+        width: 32.6%;
+    }
+
+    #equal, #clear {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    #calculator {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .number, .operator, #clear {
+        width: 105px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    #calculator {
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #out {
+        width: 93%;
+    }
+
+    .number, .operator, #clear {
+        width: 93.33px;
+    }
+}
