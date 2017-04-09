@@ -1,8 +1,6 @@
 // Main Variables
 
-var numOne,
-    numTwo,
-    display = document.getElementById('display'),
+var display = document.getElementById('display'),
     out = document.getElementById('out'),
     num = document.querySelectorAll('.number'),
     clear = document.getElementById('clear'),
@@ -15,92 +13,46 @@ clear.onclick = function() {
     display.innerText = '';
 }
 
-numOutput();
+// Input numbers
 
-function numOutput() {
-    for ( i = 0; i < num.length; i++ ) {
-        num[i].onclick = function() {
-            out.value += this.value;
-        }
+for ( i = 0; i < num.length; i++) {
+    num[i].onclick = function() {
+        out.value += this.value;
     }
 }
 
-// Addition Function
-
-addition();
-
-function addition() {
-    op[0].onclick = function() {
-        numOne = out.value;
-        display.innerText = numOne + ' + ';
+for ( i = 0; i < op.length; i++ ) {
+    op[i].onclick = function() {
+        var numOne = parseInt(out.value),
+            opVal = this.value,
+            numTwo;
+        console.log(opVal)
         out.value = '';
 
-        equal.onclick = function() {
-            numTwo = out.value;
-            var total = parseInt(numOne) + parseInt(numTwo);
-            out.value = total;
-            display.innerText = numOne + ' + ' + numTwo + ' = ' + total;
+        for ( i = 0; i < num.length; i++ ) {
+            num[i].addEventListener('click', function() {
+                numTwo = parseInt(out.value);
+                sortVal(opVal,numOne,numTwo);
+            })
         }
-
     }
 }
 
-// Subtraction Function
+function sortVal(o,i,t) {
+    var total;
 
-subtraction();
+    if ( o === '+' ) {
+        total = i + t;
+    } else if ( o === '-' ) {
+        total = i - t;
+    } else if ( o === 'x' ) {
+        total = i * t;
+    } else if ( o === '÷' ) {
+        total = i / t;
+    }
 
-function subtraction() {
-    op[1].onclick = function() {
-        numOne = out.value;
-        display.innerText = numOne + ' - ';
-        out.value = '';
-
-        equal.onclick = function() {
-            numTwo = out.value;
-            var total = parseInt(numOne) - parseInt(numTwo);
-            out.value = total;
-            display.innerText = numOne + ' - ' + numTwo + ' = ' + total;
-        }
-
+    equal.onclick = function() {
+        out.value = total;
     }
 }
 
-// Multiplication Function
-
-multiplication();
-
-function multiplication() {
-    op[2].onclick = function() {
-        numOne = out.value;
-        display.innerText = numOne + ' x ';
-        out.value = '';
-
-        equal.onclick = function() {
-            numTwo = out.value;
-            var total = parseInt(numOne) * parseInt(numTwo);
-            out.value = total;
-            display.innerText = numOne + ' x ' + numTwo + ' = ' + total;
-        }
-
-    }
-}
-
-// Division Function
-
-division();
-
-function division() {
-    op[3].onclick = function() {
-        numOne = out.value;
-        display.innerText = numOne + ' ÷ ';
-        out.value = '';
-
-        equal.onclick = function() {
-            numTwo = out.value;
-            var total = parseInt(numOne) / parseInt(numTwo);
-            out.value = total;
-            display.innerText = numOne + ' ÷ ' + numTwo + ' = ' + total;
-        }
-
-    }
-}
