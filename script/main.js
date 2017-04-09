@@ -26,7 +26,7 @@ for ( i = 0; i < op.length; i++ ) {
         var numOne = parseInt(out.value),
             opVal = this.value,
             numTwo;
-        console.log(opVal)
+
         out.value = '';
 
         for ( i = 0; i < num.length; i++ ) {
