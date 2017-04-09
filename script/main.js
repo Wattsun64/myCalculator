@@ -21,6 +21,8 @@ for ( i = 0; i < num.length; i++) {
     }
 }
 
+// Retrieve first number variable, clear out value and add event listner in order to retrieve numTwo value
+
 for ( i = 0; i < op.length; i++ ) {
     op[i].onclick = function() {
         var numOne = parseInt(out.value),
