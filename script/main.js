@@ -29,6 +29,8 @@ for ( i = 0; i < op.length; i++ ) {
 
         out.value = '';
 
+        display.innerText = numOne + ' ' + opVal;
+
         for ( i = 0; i < num.length; i++ ) {
             num[i].addEventListener('click', function() {
                 numTwo = parseInt(out.value);
@@ -53,6 +55,7 @@ function sortVal(o,i,t) {
 
     equal.onclick = function() {
         out.value = total;
+        display.innerText = i + ' ' + o + ' ' + t + ' = ' + total;
     }
 }
 
