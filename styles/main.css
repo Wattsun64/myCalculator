@@ -31,6 +31,10 @@ p {
     width: 99%;
 }
 
+#zero {
+    width: 99%;
+}
+
 .number:hover, .operator:hover, #equal:hover, #clear:hover {
     background-color: orange;
     color: #fff;
@@ -59,8 +63,12 @@ p {
         top: 0;
 
     }
-    .number, .operator {
+    .number {
         width: 32.6%;
+    }
+
+    .operator {
+        width: 24.2%;
     }
 
     #equal, #clear {
@@ -96,7 +104,15 @@ p {
         width: 93%;
     }
 
-    .number, .operator, #clear {
-        width: 93.33px;
+    .operator {
+        width: 24.05%;
+    }
+
+    .number {
+        width: 32.5%;
+    }
+
+    #clear, #zero {
+        width: 100%;
     }
 }
