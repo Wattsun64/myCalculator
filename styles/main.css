@@ -27,7 +27,7 @@ input.operator {
     width: 24.2%;
 }
 
-input#equal, inputclear {
+input#equal, input#clear {
     width: 99%;
 }
 
