@@ -23,9 +23,8 @@
         }
     })
 
-   
 
-// Retrieve first number variable, clear out value and add event listner in order to retrieve numTwo value
+// Retrieve first number variable, clear out value and add event listener in order to retrieve numTwo value
 
     for ( i = 0; i < op.length; i++ ) {
         op[i].onclick = function() {
@@ -37,12 +36,13 @@
 
             display.innerText = numOne + ' ' + opVal;
 
-            for ( i = 0; i < num.length; i++ ) {
-                num[i].addEventListener('click', function() {
-                    numTwo = parseInt(out.value);
-                    sortVal(opVal,numOne,numTwo);
-                })
-            }
+
+            document.addEventListener('click', function() {
+                numTwo = parseInt(out.value);
+
+                sortVal(opVal,numOne,numTwo);
+            })
+
         }
     }
 
