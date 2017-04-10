@@ -63,6 +63,14 @@ p {
         top: 0;
 
     }
+
+    .number, .operator, #equal, #clear {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+
     .number {
         width: 32.6%;
     }
@@ -86,8 +94,16 @@ p {
         top: 0;
     }
 
-    .number, .operator, #clear {
-        width: 105px;
+    .number {
+        width: 32.6%;
+    }
+
+    .operator {
+        width: 24.2%;
+    }
+
+    #clear, #zero {
+        width: 100%;
     }
 }
 
