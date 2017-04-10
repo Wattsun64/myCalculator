@@ -6,6 +6,7 @@
         clear = document.getElementById('clear'),
         op = document.querySelectorAll('.operator'),
         equal = document.getElementById('equal'),
+        numberDiv = document.getElementById('calc-num-btn'),
         i;
 
     clear.onclick = function() {
@@ -15,11 +16,14 @@
 
 // Input numbers
 
-    for ( i = 0; i < num.length; i++) {
-        num[i].onclick = function() {
-            out.value += this.value;
+    numberDiv.addEventListener('click', function(e) {
+        if ( e.target && e.target.nodeName === 'INPUT' ) {
+            out.value += e.target.value;
+            console.log(e.target.value + ' has been clicked');
         }
-    }
+    })
+
+   
 
 // Retrieve first number variable, clear out value and add event listner in order to retrieve numTwo value
 
