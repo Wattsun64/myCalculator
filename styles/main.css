@@ -12,7 +12,7 @@ p {
 
 }
 
-.number, #equal, #clear, .operator {
+input.number, input#equal, input#clear, input.operator {
     width: 32.5%;
     border: none;
     padding: 30px;
@@ -23,24 +23,24 @@ p {
     outline: none;
 }
 
-.operator {
+input.operator {
     width: 24.2%;
 }
 
-#equal, #clear {
+input#equal, inputclear {
     width: 99%;
 }
 
-#zero {
+input#zero {
     width: 99%;
 }
 
-.number:hover, .operator:hover, #equal:hover, #clear:hover {
+input.number:hover, input.operator:hover, input#equal:hover, input#clear:hover {
     background-color: orange;
     color: #fff;
 }
 
-#out {
+input#out {
     width: 95.5%;
     height: 100px;
     border: none;
@@ -63,17 +63,17 @@ p {
         top: 0;
 
     }
-    
 
-    .number {
+
+    input.number {
         width: 32.6%;
     }
 
-    .operator {
+    input.operator {
         width: 24.2%;
     }
 
-    #equal, #clear {
+    input#equal, input#clear {
         width: 100%;
     }
 }
@@ -88,15 +88,15 @@ p {
         top: 0;
     }
 
-    .number {
+    input.number {
         width: 32.6%;
     }
 
-    .operator {
+    input.operator {
         width: 24.2%;
     }
 
-    #clear, #zero {
+    input#clear, input#zero {
         width: 100%;
     }
 }
@@ -110,19 +110,19 @@ p {
         top: 0;
     }
 
-    #out {
+    input#out {
         width: 93%;
     }
 
-    .operator {
+    input.operator {
         width: 24.05%;
     }
 
-    .number {
+    input.number {
         width: 32.5%;
     }
 
-    #clear, #zero {
+    input#clear, input#zero {
         width: 100%;
     }
 }
