@@ -63,13 +63,7 @@ p {
         top: 0;
 
     }
-
-    .number, .operator, #equal, #clear {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-
+    
 
     .number {
         width: 32.6%;
